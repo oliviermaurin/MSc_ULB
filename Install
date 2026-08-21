@@ -11,8 +11,7 @@
 
 #Quick command
 
-markdown
-```
+```bash
 conda create -n trimmomatic -c bioconda -c conda-forge trimmomatic -y'''
 conda deactivate
 ```
