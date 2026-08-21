@@ -1,16 +1,19 @@
 ######Installations
-
 #Instal miniconda
-	###see Niko's protocol PC or MAC
+	###see Niko's protocol -> PC or MAC
 
 #Instal HybPiper
-	###see Niko's protocol PC or MAC
+	###see Niko's protocol -> PC or MAC
 	
-#Instal Trimmomatic
+
+
+###Install Trimmomatic
+#Quick command
+conda create -n trimmomatic -c bioconda -c conda-forge trimmomatic -y
+
+#Long setup in three steps to run one after another (if above failed)
 conda create -n trimmomatic
-
 conda activate trimmomatic
-
 conda install -c bioconda trimmomatic
 
 conda deactivate
