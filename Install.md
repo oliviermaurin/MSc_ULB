@@ -19,8 +19,14 @@ conda deactivate
 #### OR long setup in four steps to run one after another (if above failed)
 ```bash
 conda create -n trimmomatic
+```
+```bash
 conda activate trimmomatic
+```
+```bash
 conda install -c bioconda trimmomatic
+```
+```bash
 conda deactivate
 ```
 
