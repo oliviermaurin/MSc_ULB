@@ -46,6 +46,8 @@ conda create -n mafft
 ```
 ```bash
 conda activate mafft
+```
+```bash
 conda install -c bioconda mafft
 ```
 ```bash
