@@ -54,30 +54,76 @@ conda install -c bioconda mafft
 conda deactivate
 ```
 
-#Install iqtree
+# Install iqtree - Generating gene trees
 
+#### Quick command
+```bash
+conda create -n iqtree -c bioconda -c conda-forge iqtree -y
+```
+```bash
+conda deactivate
+```
+
+#### OR long setup in four steps to run one after another (if above failed)
+```bash
 conda create -n iqtree
-
+```
+```bash
 conda activate iqtree
-
+```
+```bash
 conda install -c bioconda iqtree
+```
+```bash
+conda deactivate
 
-#Install newick_utils
+#### Quick command
+```bash
+conda create -n iqtree -c bioconda -c conda-forge iqtree -y
+```
+```bash
+conda deactivate
+```
 
+# Install newick_utils - In connection with Astral, it will generate a species tree
+
+#### Quick command
+```bash
+conda create -n newick_utils -c bioconda -c conda-forge newick_utils -y
+```
+```bash
+conda deactivate
+```
+
+#### OR long setup in four steps to run one after another (if above failed)
+```bash
 conda create -n newick_utils
-
+```
+```bash
 conda activate newick_utils
-
+```
+```bash
 conda install -c bioconda newick_utils
+```
+```bash
+conda deactivate
 
-
-Try this on Mac:
-
+# Note that the abover version of newick_utils may fail
+```bash
 conda create -n newick_utils
-conda activate newick_utils
+```
+```bash
+conda activate -n newick_utils
+```
+```bash
 conda install -n base -c conda-forge mamba
+```
+```bash
 conda config --env --set subdir osx-64
+```
+```bash
 conda install -c bioconda -c conda-forge newick_utils
+```
 
 #Install biopythonls
 
