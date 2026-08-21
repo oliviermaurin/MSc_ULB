@@ -5,7 +5,7 @@ This is a README for the MSc course between **Meise Botanic Garden** and the **U
 It contains:
 
 - ⚙️ **[`Install.md`](./Install.md)** — installation instructions for all required software
-- 🧬 **[`data/`](./data)** — raw and processed data used throughout the course
+- 🧬 **[`data.md/`](./data.md)** — raw and processed data used throughout the course
 - 💻 **[`scripts/`](./scripts)** — analysis scripts and pipelines (Trimmomatic, HybPiper, RAxML, etc.)
 - 📄 **[`files/`](./files)** — protocols, slides, and additional course material
 
@@ -17,9 +17,7 @@ It contains:
 MSc_ULB/
 ├── README.md
 ├── Install.md
-├── data/
-│   ├── raw/
-│   └── processed/
+├── data.md/
 ├── scripts/
 │   ├── trimming.sh
 │   └── alignment.sh
