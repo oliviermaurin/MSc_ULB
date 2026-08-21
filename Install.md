@@ -30,19 +30,25 @@ conda install -c bioconda trimmomatic
 conda deactivate
 ```
 
-# Install mafft - Aligments of DMA matrices
+# Install mafft - Aligments of DNA matrices
 
 #### Quick command
 ```bash
 conda create -n mafft -c bioconda -c conda-forge mafft -y
+```
+```bash
 conda deactivate
 ```
 
 #### OR long setup in four steps to run one after another (if above failed)
 ```bash
 conda create -n mafft
+```
+```bash
 conda activate mafft
 conda install -c bioconda mafft
+```
+```bash
 conda deactivate
 ```
 
