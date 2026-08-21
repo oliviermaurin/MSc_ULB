@@ -7,7 +7,7 @@ It contains:
 - ⚙️ **[`Install.md`](./Install.md)** — installation instructions for all required software
 - 🧬 **[`data/`](./data)** — raw and processed data used throughout the course
 - 💻 **[`scripts/`](./scripts)** — analysis scripts and pipelines (Trimmomatic, HybPiper, RAxML, etc.)
-- 📄 **[`files/`](./docs)** — protocols, slides, and additional course material
+- 📄 **[`files/`](./files)** — protocols, slides, and additional course material
 
 ---
 
