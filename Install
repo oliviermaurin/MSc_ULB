@@ -6,6 +6,11 @@
 	###see Niko's protocol -> PC or MAC
 	
 
+# Quick command
+```
+conda create -n trimmomatic -c bioconda -c conda-forge trimmomatic -y
+conda deactivate
+```
 
 ######Install Trimmomatic [Trimming of raw fastq.tar.gz file]######
 
