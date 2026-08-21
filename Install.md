@@ -6,7 +6,7 @@ See Niko's protocol -> PC or MAC
 # Install HybPiper
 See Niko's protocol -> PC or MAC
 
-###### Install Trimmomatic [Trimming of raw fastq.tar.gz file]
+###### Install Trimmomatic - Trimming of raw fastq.tar.gz file
 
 #### Quick command
 ```bash
