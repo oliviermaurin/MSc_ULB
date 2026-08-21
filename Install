@@ -7,36 +7,41 @@
 	
 
 
-###Install Trimmomatic
+######Install Trimmomatic [Trimming of raw fastq.tar.gz file]######
+
 #Quick command
 conda create -n trimmomatic -c bioconda -c conda-forge trimmomatic -y
+conda deactivate
 
-#Long setup in three steps to run one after another (if above failed)
+#OR long setup in four steps to run one after another (if above failed)
 conda create -n trimmomatic
 conda activate trimmomatic
 conda install -c bioconda trimmomatic
-
 conda deactivate
 
-#Install mafft
+######Install mafft [Alignments of DNA matrices]######
 
-conda create -n mafft
-
-conda activate mafft
-
-conda install -c bioconda mafft
-
-conda deactivate
-
+#Quick command
 conda create -n mafft -c bioconda -c conda-forge mafft -y
+conda deactivate
 
-#Install iqtree
+#OR long setup in four steps to run one after another (if above failed)
+conda create -n mafft
+conda activate mafft
+conda install -c bioconda mafft
+conda deactivate
 
+######Install iqtree [generate Genes tres for each alignments######
+
+#Quick command
+conda create -n iqtree -c bioconda -c conda-forge iqtree -y
+conda deactivate
+
+#OR long setup in four steps to run one after another (if above failed)
 conda create -n iqtree
-
 conda activate iqtree
-
 conda install -c bioconda iqtree
+conda deactivate
 
 #Install newick_utils
 
