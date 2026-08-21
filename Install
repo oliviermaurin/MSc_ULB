@@ -10,7 +10,7 @@
 ######Install Trimmomatic [Trimming of raw fastq.tar.gz file]######
 
 #Quick command
-conda create -n trimmomatic -c bioconda -c conda-forge trimmomatic -y
+'''conda create -n trimmomatic -c bioconda -c conda-forge trimmomatic -y'''
 conda deactivate
 
 #OR long setup in four steps to run one after another (if above failed)
