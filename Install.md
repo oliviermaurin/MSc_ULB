@@ -11,7 +11,8 @@ See Niko's protocol -> PC or MAC
 #### Quick command
 ```bash
 conda create -n trimmomatic -c bioconda -c conda-forge trimmomatic -y
-conda deactivate
+```
+```bashconda deactivate
 ```
 
 #### OR long setup in four steps to run one after another (if above failed)
