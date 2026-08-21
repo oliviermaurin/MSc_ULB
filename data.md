@@ -1,5 +1,6 @@
-## Data
+## Course data are available on Google Drive:
 
-Course data is available on Google Drive:
-👉 [Access the data here](https://drive.google.com/drive/folders/1-ReNA3Tf6iQaNfSFUbJ9tRuR9hftLIqE?usp=drive_link) on Google Docs.
+👉 [Access the Raw data (.fastq.tar.gz here](https://drive.google.com/drive/folders/1-ReNA3Tf6iQaNfSFUbJ9tRuR9hftLIqE?usp=drive_link).
+
+👉 [Access the Trimmed files (.fastq) here]()
 
