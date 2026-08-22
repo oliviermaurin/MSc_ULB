@@ -1,4 +1,4 @@
-# Setting up the work environment
+### Setting up the work environment
 ```bash
 cd ~/Documents
 ```
@@ -9,7 +9,7 @@ mkdir Combretaceae_Analysis
 cd Combretaceae_Analysis
 ```
 
-# Copy scripts and targets folder from Googledrive
+### Copy scripts and targets folder from Googledrive
 
 #
 ###### Analysis
