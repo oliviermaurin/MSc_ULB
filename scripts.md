@@ -200,12 +200,8 @@ done < ./genenames.txt
 mkdir -p 7_Astral_V1
 ````
 
-### Confirm iqtree directory name below:
-```bash
-````
-```bash
-mkdir -p 7_Astral_V1
-````
+HERE
+
 ```bash
 cat 6_IQTree_V1/*.treefile > 7_Astral_V1/iqtrees.trees
 ````
