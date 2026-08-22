@@ -10,9 +10,10 @@ mkdir Combretaceae_Analysis
 cd Combretaceae_Analysis
 ```
 
-### Copy scripts and targets folder from Googledrive
+### Copy scripts and targets folders from Googledrive
+#### Simply download and place both folders within Combretaceae_Analysis
 
-#
+
 ###### Analysis
 # Steps done using OS files management
 
