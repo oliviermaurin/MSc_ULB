@@ -1,9 +1,15 @@
 # Setting up the work environment
-## Change directore to MyDocuments
 ```bash
 cd ~/Documents
 ```
+```bash
+mkdir Combretaceae_Analysis
+```bash
+cd Combretaceae_Analysis
+```
+```
 
+#
 ###### Analysis
 # Steps done using OS files management
 
