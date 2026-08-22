@@ -1,4 +1,5 @@
 ### Setting up the work environment
+#### (1)Navigate to (2)Create folder and (3)Navigate to this folder
 ```bash
 cd ~/Documents
 ```
