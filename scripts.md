@@ -173,47 +173,51 @@ cd ../2_Aligned
 ```bash
 for f in *.fas; do (java -jar /Users/olivierm/Desktop/BionfoMScTest/1_scripts/phyutility.jar -clean 0.8 -in $f -out ${f/.fas}_Tr.fas); done
 ````
-
-
-#Cleaning
-
+##### Step 4.3 Cleaning of trimmed aligments - Remove sequences in each loci which might ony be containing N or gaps (-)
+```bash
 for f in *fas; do (echo ${f/}>> samples.txt); done
-
+````
+```bash
 python3  /Users/olivierm/Desktop/BionfoMScTest/1_scripts/CleaningNew.py
-
-#remove empty sequence
-
-#FasConcat
-
-#prepare charset
-
-#run iqtree
+````
+###### Step 4.4 iqtree - Generate gene trees (a tree per loci)
+```bash
 conda activate iqtree
-
+````
+```bash
 for f in *fas; do (echo ${f/_Supercontigs_Al_Tr_Cl.fas}>> genenames.txt); done
-
+````
+```bash
 while IFS= read -r name || [ -n "$name" ]; do
     [ -z "$name" ] && continue
     gene="${name}_Supercontigs_Al_Tr_Cl.fas"
     iqtree -s "$gene" -pre "${gene%.fas}" -bb 1000 -nt 2 -m MFP
 done < ./genenames.txt
+````
 
-
-conda deactivate
-
-#Astral
+##### Step 4.5 Astral - Generate a species tree (or coalescent tree)
+```bash
 mkdir -p 7_Astral_V1
+````
 
 ### Confirm iqtree directory name below:
-
+```bash
+````
+```bash
 mkdir -p 7_Astral_V1
+````
+```bash
 cat 6_IQTree_V1/*.treefile > 7_Astral_V1/iqtrees.trees
+````
+```bash
 cd 7_Astral_V1
-
+````
+```bash
 nw_ed iqtrees.trees 'i & b<=10' o > iqtree-BS10.trees
-
+````
+```bash
 java -jar  /home/omaurin/apps/Astral/astral.5.7.8.jar -i iqtree-BS10.trees -o iqtree-BS10_sp_V1.tre --outgroup ERR4180096_1M_L001 -t 2 2> iqtree-astral_BS10.log
-
+````
 
 #Renaming tips
 <img width="468" height="642" alt="image" src="https://github.com/user-attachments/assets/aa893038-a0f5-47dc-a758-e9ff31704fc6" />
