@@ -10,7 +10,6 @@ mkdir Combretaceae_Analysis
 cd Combretaceae_Analysis
 ```
 
-
 ### Copy scripts (1_scripts) and targets (2_targets) folders from Googledrive
 #### Download and place both folders within Combretaceae_Analysis (do not download individuals files within each folders)
 
@@ -18,11 +17,9 @@ cd Combretaceae_Analysis
 
 👉 Access the targets folder [CLICK HERE](https://drive.google.com/drive/folders/1U8CsmAMU43nowDYPNBHyxp0V2a17O5J5?usp=drive_link)
 
-
 ### Download the Raw Data and place within Combretaceae_Analysis (do not download individuals files within each folders)
 
 👉 Access the Raw data (.fastq.tar.gz)[CLICK HERE](https://drive.google.com/drive/folders/1-ReNA3Tf6iQaNfSFUbJ9tRuR9hftLIqE?usp=drive_link)
-
 
 ### Preparing and analysing the Raw Data
 
@@ -32,12 +29,10 @@ cd Combretaceae_Analysis
 ```bash
 cd 1_Raw
 ```
-
 ##### Activate trimmomatic
 ```bash
 conda activate trimmomatic
 ````
-
 ##### create a list of samples (sample.txt) with all samples:
 ```bash
 for f in *R1.fastq.gz; do (echo ${f/_R1.fastq.gz}>> samples.txt); done
