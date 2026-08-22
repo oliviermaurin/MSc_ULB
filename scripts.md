@@ -1,5 +1,5 @@
 ### Setting up the work environment
-#### (1)Navigate to (2)Create folder and (3)Navigate to this folder
+#### (1) Navigate to (2) Create folder and (3)Navigate to this folder
 ```bash
 cd ~/Documents
 ```
@@ -9,6 +9,7 @@ mkdir Combretaceae_Analysis
 ```bash
 cd Combretaceae_Analysis
 ```
+
 
 ### Copy scripts (1_scripts) and targets (2_targets) folders from Googledrive
 #### Download and place both folders within Combretaceae_Analysis (do not downalid individuals files within each folders)
