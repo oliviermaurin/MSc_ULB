@@ -164,9 +164,16 @@ mkdir ../2_Aligned
 ```bash
 mv *Al.fas ../2_Aligned
 ````
-#Trimming
-
+##### Step 4.2 Trimming using Phyutility - remove nucleotides if reperesented in less than 80% of samples 
+###### Navigate to 2_Aligned
+```bash
+cd ../2_Aligned
+````
+###### Proceed to trimming
+```bash
 for f in *.fas; do (java -jar /Users/olivierm/Desktop/BionfoMScTest/1_scripts/phyutility.jar -clean 0.8 -in $f -out ${f/.fas}_Tr.fas); done
+````
+
 
 #Cleaning
 
