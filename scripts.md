@@ -216,5 +216,3 @@ java -jar  /home/omaurin/apps/Astral/astral.5.7.8.jar -i iqtree-BS10.trees -o iq
 ````
 
 #Renaming tips
-<img width="468" height="642" alt="image" src="https://github.com/user-attachments/assets/aa893038-a0f5-47dc-a758-e9ff31704fc6" />
-
