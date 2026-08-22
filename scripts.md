@@ -77,12 +77,12 @@ cd 2_Trimmed
 conda activate hybpiper
 ````
 
-# Create sample.txt
+##### Create sample.txt
 ````bash
 for f in *_R1_Tpaired.fastq; do (echo ${f/_R1_Tpaired.fastq} >> samples.txt); done
 ````
 
-# Run Hybpiper in a loop
+##### Run Hybpiper in a loop
 ````bash
 while read -r name; do
     echo "Running HybPiper assemble for $name..."
@@ -106,7 +106,7 @@ mkdir ../3_Hybpiper
 mv *L001 ../3_Hybpiper
 ````
 
-### STEP3_generate stats, heatmap and DNA matrices
+#### STEP3 Generate stats, heatmap and DNA matrices
 
 #Step3_1
 hybpiper stats \
