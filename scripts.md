@@ -24,21 +24,46 @@ cd Combretaceae_Analysis
 👉 Access the Raw data (.fastq.tar.gz)[CLICK HERE](https://drive.google.com/drive/folders/1-ReNA3Tf6iQaNfSFUbJ9tRuR9hftLIqE?usp=drive_link)
 
 
-
 ### Analysis
-# Steps done using OS files management
 
+#### Running Trimmomatic - Cleaning reads of adapteurs
 
-# Runninf Trimmotaic - Cleaning reads of adapteurs
+##### Navigate to 1_Raw
+```bash
+cd 1_Raw
+```
+
+##### Activate trimmomatic
+```bash
+conda activate trimmomatic
+````
+
+##### create a samplessample.txt with all samples:
+```bash
+for f in *R1.fastq.gz; do (echo ${f/_R1.fastq.gz}>> samples.txt); done
+````
+
+#Run Trimmomatic in a loop.
+while read -r name; do
+    echo "Processing $name..."
+    trimmomatic PE -phred33 \
+        "${name}"_R1.fastq.gz "${name}"_R2.fastq.gz \
+        "${name}"_R1_Tpaired.fastq "${name}"_R1_Tunpaired.fastq \
+        "${name}"_R2_Tpaired.fastq "${name}"_R2_Tunpaired.fastq \
+    ILLUMINACLIP:~/Documents/Combretaceae_Analysis/1_scripts/TruSeq3-PE-2.fa:1:30:7:2:true \
+        SLIDINGWINDOW:4:30 LEADING:30 MINLEN:40
+    cat "${name}"_R1_Tunpaired.fastq "${name}"_R2_Tunpaired.fastq > "${name}"_TunpairedAll.fastq
+done < samples.txt
+
+###Deactivate trimmomatic
+conda deactivate
+
+###(1)Create folder and (2)move trimmed output into it
+mkdir ../2_Trimmed
+
+mv *fastq ../2_Trimmed
+<img width="468" height="382" alt="image" src="https://github.com/user-attachments/assets/57439705-1b04-4079-ad94-10eb3939f78b" />
+
 
 👉 Access the Trimmed files (.fastq)[CLICK HERE]()
-# Install HybPiper
-See Niko's protocol -> PC or MAC
 
-# Install Trimmomatic - Trimming of raw fastq.tar.gz file
-```bash
-conda create -n trimmomatic -c bioconda -c conda-forge trimmomatic -y
-```
-```bash
-conda deactivate
-```
