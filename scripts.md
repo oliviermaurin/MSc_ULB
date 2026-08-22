@@ -9,6 +9,8 @@ mkdir Combretaceae_Analysis
 cd Combretaceae_Analysis
 ```
 
+# Copy scripts and targets folder from Googledrive
+
 #
 ###### Analysis
 # Steps done using OS files management
