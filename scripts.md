@@ -134,12 +134,12 @@ hybpiper retrieve_sequences \
 mkdir ../4_Analysis
 ````
 ```bash
-cp -r 2_Supercontigs ../4_Analysis/
+cp -r 2_Supercontigs ../4_Analysis/1_Supercontigs
 ````
 ##### Step 4.1 Mafft - Align matrices
 ###### Navigate to 3_Hybpiper
 ```bash
-cd ../4_Analysis/2_Supercontigs
+cd ../4_Analysis/1_Supercontigs
 ````
 ###### Activate Mafft
 ```bash
@@ -149,16 +149,21 @@ conda activate mafft
 ```bash
 for f in *.fasta; do (echo ${f/.fasta} >> genenames.txt); done
 ````
-#Proceed to alignments of all genes in a loop
+##### Proceed to alignment for all loci in a loop
+```bash
 while IFS= read -r name || [ -n "$name" ]; do
     [ -z "$name" ] && continue
     mafft --thread 8 --localpair --maxiterate 1000 \
         "${name}.fasta" > "${name}_Supercontigs_Al.fas"
 done < ./genenames.txt
-
-#Exit mafft
-conda deactivate
-
+````
+##### Create diretory for aligned loci and move aligned loci into it
+```bash
+mkdir ../2_Aligned
+````
+```bash
+mv *Al.fas ../2_Aligned
+````
 #Trimming
 
 for f in *.fas; do (java -jar /Users/olivierm/Desktop/BionfoMScTest/1_scripts/phyutility.jar -clean 0.8 -in $f -out ${f/.fas}_Tr.fas); done
