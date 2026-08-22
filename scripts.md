@@ -24,7 +24,7 @@ cd Combretaceae_Analysis
 👉 Access the Raw data (.fastq.tar.gz)[CLICK HERE](https://drive.google.com/drive/folders/1-ReNA3Tf6iQaNfSFUbJ9tRuR9hftLIqE?usp=drive_link)
 
 
-### Analysis
+### Preparing and analysing the Raw Data
 
 #### STEP_1 Running Trimmomatic - Cleaning reads of adapteurs
 
@@ -38,7 +38,7 @@ cd 1_Raw
 conda activate trimmomatic
 ````
 
-##### create a samplessample.txt with all samples:
+##### create a list of samples (sample.txt) with all samples:
 ```bash
 for f in *R1.fastq.gz; do (echo ${f/_R1.fastq.gz}>> samples.txt); done
 ````
@@ -140,6 +140,7 @@ mkdir ../3_Hybpiper
 
 mv *L001 ../3_Hybpiper
 
+##### Analysing the Sequence Data
 ### STEP4_Aligne matrices
 
 #Navigate to 3_Hybpiper
