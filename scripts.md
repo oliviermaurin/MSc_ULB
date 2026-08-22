@@ -173,6 +173,11 @@ cd ../2_Aligned
 ```bash
 for f in *.fas; do (java -jar /Users/olivierm/Desktop/BionfoMScTest/1_scripts/phyutility.jar -clean 0.8 -in $f -out ${f/.fas}_Tr.fas); done
 ````
+HEREHEREHEREHEREHEREHEREHEREHERE
+
+
+
+
 ##### Step 4.3 Cleaning of trimmed aligments - Remove sequences in each loci which might ony be containing N or gaps (-)
 ```bash
 for f in *fas; do (echo ${f/}>> samples.txt); done
@@ -194,14 +199,13 @@ while IFS= read -r name || [ -n "$name" ]; do
     iqtree -s "$gene" -pre "${gene%.fas}" -bb 1000 -nt 2 -m MFP
 done < ./genenames.txt
 ````
+```bash
+mkdir 
 
 ##### Step 4.5 Astral - Generate a species tree (or coalescent tree)
 ```bash
 mkdir -p 7_Astral_V1
 ````
-
-HERE
-
 ```bash
 cat 6_IQTree_V1/*.treefile > 7_Astral_V1/iqtrees.trees
 ````
