@@ -1,5 +1,5 @@
 ###### Setting up the work environment
-# Chnage directore to MyDocuments
+## Change directore to MyDocuments
 ```bash
 cd ~/Documents
 ```
