@@ -2,9 +2,11 @@
 
 # Install miniconda
 See Niko's protocol -> PC or MAC
+https://github.com/oliviermaurin/MSc_ULB/blob/main/files/HybPiper%20Installation%20Guide%20for%20macOS.pdf
 
 # Install HybPiper
 See Niko's protocol -> PC or MAC
+https://github.com/oliviermaurin/MSc_ULB/blob/main/files/HybPiper%20Installation%20Guide%20for%20macOS.pdf
 
 # Install Trimmomatic - Trimming of raw fastq.tar.gz file
 ```bash
