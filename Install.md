@@ -70,3 +70,6 @@ conda install -c conda-forge biopython
 ```bash
 conda create -n raxml -c bioconda -c conda-forge raxml -y
 ```
+```bash
+conda deactivate
+````
