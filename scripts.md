@@ -11,7 +11,7 @@ cd Combretaceae_Analysis
 ```
 
 ### Copy scripts and targets folders from Googledrive
-#### Simply download and place both folders within Combretaceae_Analysis
+#### Download and place both folders within Combretaceae_Analysis
 
 
 ###### Analysis
