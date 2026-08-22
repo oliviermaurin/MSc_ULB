@@ -120,7 +120,7 @@ hybpiper recovery_heatmap \
     --heatmap_filename 2_Supercontigs__Heatmap \
     --heatmap_filetype pdf
 ````
-#Step3_3
+##### Step3_3
 ```bash
 hybpiper retrieve_sequences \
     -t_dna /Users/olivierm/Desktop/BionfoMScTest/2_Targets/translated_Baits_20.fasta \
@@ -129,8 +129,8 @@ hybpiper retrieve_sequences \
     --fasta_dir 2_Supercontigs
 ````
 
-##### Analysing the Sequence Data
-### STEP4_Aligne matrices
+#### Analysing the Sequence Data
+##### STEP 4 Mafft - Align matrices
 
 #Navigate to 3_Hybpiper
 cd ../3_Hybpiper
