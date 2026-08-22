@@ -37,7 +37,6 @@ conda activate trimmomatic
 ```bash
 for f in *R1.fastq.gz; do (echo ${f/_R1.fastq.gz}>> samples.txt); done
 ````
-
 ##### Run Trimmomatic in a loop.
 ```bash
 while read -r name; do
@@ -51,7 +50,6 @@ while read -r name; do
     cat "${name}"_R1_Tunpaired.fastq "${name}"_R2_Tunpaired.fastq > "${name}"_TunpairedAll.fastq
 done < samples.txt
 ````
-
 ##### (1) Create folder and (2) Move trimmed output into it
 ```bash
 mkdir ../2_Trimmed
@@ -59,7 +57,6 @@ mkdir ../2_Trimmed
 ```bash
 mv *fastq ../2_Trimmed
 ````
-
 👉 Access the Trimmed files (.fastq)[CLICK HERE](https://drive.google.com/drive/folders/1LBb-kk8ilU3VOzkFHQdkyEHC_y-snBGf?usp=drive_link)
 
  #### STEP_2 Running Hybpiper - Mapping Reads on target file
@@ -71,12 +68,10 @@ cd 2_Trimmed
 ````bash
 conda activate hybpiper
 ````
-
 ##### Create sample.txt
 ````bash
 for f in *_R1_Tpaired.fastq; do (echo ${f/_R1_Tpaired.fastq} >> samples.txt); done
 ````
-
 ##### Run Hybpiper in a loop
 ````bash
 while read -r name; do
@@ -100,40 +95,39 @@ mkdir ../3_Hybpiper
 ```bash
 mv *L001 ../3_Hybpiper
 ````
-
-#### STEP3 Generate stats, heatmap and DNA matrices
-
-#Step3_1
+#### STEP3 Generating Stats, Heatmap and DNA matrices
+##### Navigate to the folder with Trimmed sequences files
+````bash
+cd 3_Hybpiper
+````
+##### Create sample.txt
+````bash
+ls *L001 > samples.txt
+````
+##### Step 3.1 - Generating Stats
+```bash
 hybpiper stats \
     -t_dna /Documents/Combretaceae_Analysis/2_Targets/translated_Baits_20.fasta \
     supercontig \
     ./samples.txt \
     --stats_filename 2_Supercontigs_stats \
     --seq_lengths_filename 2_Supercontigs_lenght
-
-#Step3_2
+````
+##### Step 3.2
+```bash
 hybpiper recovery_heatmap \
     2_Supercontigs_lenght.tsv \
     --heatmap_filename 2_Supercontigs__Heatmap \
     --heatmap_filetype pdf
-
+````
 #Step3_3
+```bash
 hybpiper retrieve_sequences \
     -t_dna /Users/olivierm/Desktop/BionfoMScTest/2_Targets/translated_Baits_20.fasta \
     supercontig \
     --sample_names ./samples.txt \
     --fasta_dir 2_Supercontigs
-
-#Exit Hybpiper
-conda deactivate
-
-#Move all Hybpiper output to a folder called 3_Hybpiper
-
-linux
-mkdir ../3_Hybpiper
-
-
-mv *L001 ../3_Hybpiper
+````
 
 ##### Analysing the Sequence Data
 ### STEP4_Aligne matrices
