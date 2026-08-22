@@ -4,9 +4,9 @@ cd ~/Documents
 ```
 ```bash
 mkdir Combretaceae_Analysis
+```
 ```bash
 cd Combretaceae_Analysis
-```
 ```
 
 #
