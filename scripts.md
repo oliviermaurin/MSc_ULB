@@ -120,7 +120,7 @@ hybpiper recovery_heatmap \
     --heatmap_filename 2_Supercontigs__Heatmap \
     --heatmap_filetype pdf
 ````
-##### Step3.3 - Retrieve sequences for all samples per loci
+##### Step 3.3 - Retrieve sequences for all samples per loci
 ```bash
 hybpiper retrieve_sequences \
     -t_dna /Users/olivierm/Desktop/BionfoMScTest/2_Targets/translated_Baits_20.fasta \
@@ -129,18 +129,26 @@ hybpiper retrieve_sequences \
     --fasta_dir 2_Supercontigs
 ````
 
-#### Analysing the Sequence Data
-##### STEP 4 Mafft - Align matrices
-
-#Navigate to 3_Hybpiper
-cd ../3_Hybpiper
-
-#activate Mafft
+#### STEP 4 - Analysing the Sequence Data
+```bash
+mkdir ../4_Analysis
+````
+```bash
+cp -r 2_Supercontigs ../4_Analysis/
+````
+##### Step 4.1 Mafft - Align matrices
+###### Navigate to 3_Hybpiper
+```bash
+cd ../4_Analysis/2_Supercontigs
+````
+###### Activate Mafft
+```bash
 conda activate mafft
-
-#Create list of gene names
+````
+##### Create list of gene names
+```bash
 for f in *.fasta; do (echo ${f/.fasta} >> genenames.txt); done
-
+````
 #Proceed to alignments of all genes in a loop
 while IFS= read -r name || [ -n "$name" ]; do
     [ -z "$name" ] && continue
