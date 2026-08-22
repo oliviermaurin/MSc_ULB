@@ -19,7 +19,11 @@ cd Combretaceae_Analysis
 👉 Access the targets folder [CLICK HERE](https://drive.google.com/drive/folders/1U8CsmAMU43nowDYPNBHyxp0V2a17O5J5?usp=drive_link)
 
 
-### Download the Raw Data
+### Download the Raw Data and place within Combretaceae_Analysis
+
+👉 Access the Raw data (.fastq.tar.gz)[CLICK HERE](https://drive.google.com/drive/folders/1-ReNA3Tf6iQaNfSFUbJ9tRuR9hftLIqE?usp=drive_link)
+
+
 
 ### Analysis
 # Steps done using OS files management
@@ -27,7 +31,7 @@ cd Combretaceae_Analysis
 
 # Runninf Trimmotaic - Cleaning reads of adapteurs
 
-
+👉 Access the Trimmed files (.fastq)[CLICK HERE]()
 # Install HybPiper
 See Niko's protocol -> PC or MAC
 
