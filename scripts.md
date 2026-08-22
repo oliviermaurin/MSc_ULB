@@ -104,7 +104,7 @@ cd 3_Hybpiper
 ````bash
 ls *L001 > samples.txt
 ````
-##### Step 3.1 - Generating Stats
+##### Step 3.1 - Generating the stats
 ```bash
 hybpiper stats \
     -t_dna /Documents/Combretaceae_Analysis/2_Targets/translated_Baits_20.fasta \
@@ -113,14 +113,14 @@ hybpiper stats \
     --stats_filename 2_Supercontigs_stats \
     --seq_lengths_filename 2_Supercontigs_lenght
 ````
-##### Step 3.2
+##### Step 3.2 - Generating a Heatmap
 ```bash
 hybpiper recovery_heatmap \
     2_Supercontigs_lenght.tsv \
     --heatmap_filename 2_Supercontigs__Heatmap \
     --heatmap_filetype pdf
 ````
-##### Step3_3
+##### Step3.3 - Retrieve sequences for all samples per loci
 ```bash
 hybpiper retrieve_sequences \
     -t_dna /Users/olivierm/Desktop/BionfoMScTest/2_Targets/translated_Baits_20.fasta \
