@@ -19,7 +19,7 @@ cd Combretaceae_Analysis
 👉 Access the targets folder [CLICK HERE](https://drive.google.com/drive/folders/1U8CsmAMU43nowDYPNBHyxp0V2a17O5J5?usp=drive_link)
 
 
-### Download the Raw Data and place within Combretaceae_Analysis
+### Download the Raw Data and place within Combretaceae_Analysis (do not download individuals files within each folders)
 
 👉 Access the Raw data (.fastq.tar.gz)[CLICK HERE](https://drive.google.com/drive/folders/1-ReNA3Tf6iQaNfSFUbJ9tRuR9hftLIqE?usp=drive_link)
 
@@ -43,7 +43,8 @@ conda activate trimmomatic
 for f in *R1.fastq.gz; do (echo ${f/_R1.fastq.gz}>> samples.txt); done
 ````
 
-#Run Trimmomatic in a loop.
+##### Run Trimmomatic in a loop.
+```bash
 while read -r name; do
     echo "Processing $name..."
     trimmomatic PE -phred33 \
@@ -54,16 +55,15 @@ while read -r name; do
         SLIDINGWINDOW:4:30 LEADING:30 MINLEN:40
     cat "${name}"_R1_Tunpaired.fastq "${name}"_R2_Tunpaired.fastq > "${name}"_TunpairedAll.fastq
 done < samples.txt
+````
 
-###Deactivate trimmomatic
-conda deactivate
-
-###(1)Create folder and (2)move trimmed output into it
+##### (1) Create folder and (2) Move trimmed output into it
+```bash
 mkdir ../2_Trimmed
-
+````
+```bash
 mv *fastq ../2_Trimmed
-<img width="468" height="382" alt="image" src="https://github.com/user-attachments/assets/57439705-1b04-4079-ad94-10eb3939f78b" />
+````
 
-
-👉 Access the Trimmed files (.fastq)[CLICK HERE]()
+👉 Access the Trimmed files (.fastq)[CLICK HERE](https://drive.google.com/drive/folders/1LBb-kk8ilU3VOzkFHQdkyEHC_y-snBGf?usp=drive_link)
 
