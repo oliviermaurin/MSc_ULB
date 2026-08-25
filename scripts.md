@@ -196,7 +196,7 @@ done < ./genenames.txt
 ````
 ```bash
 mkdir 
-
+````
 ##### Step 4.5 Astral - Generate a species tree (or coalescent tree)
 ```bash
 mkdir -p 7_Astral_V1
