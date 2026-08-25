@@ -82,5 +82,7 @@ conda deactivate
 ````
 # Install modeltest-nj
 ```bash
-conda create -n modeltest-nj -c bioconda -c conda-forge modeltest-nj -y
+CONDA_SUBDIR=osx-64 conda create -n modeltest-ng -c bioconda -c conda-forge modeltest-ng -y
+conda activate modeltest-ng
+conda config --env --set subdir osx-64
 ````
