@@ -79,4 +79,7 @@ conda create -n mrbayes -c bioconda -c conda-forge mrbayes -y
 ```
 ```bash
 conda deactivate
+# Install modeltest-nj
+```bash
+conda create -n modeltest-nj -c bioconda -c conda-forge modeltest-nj -y
 ````
