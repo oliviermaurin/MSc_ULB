@@ -123,7 +123,7 @@ hybpiper recovery_heatmap \
 ##### Step 3.3 - Retrieve sequences for all samples per loci
 ```bash
 hybpiper retrieve_sequences \
-    -t_dna /Users/olivierm/Desktop/BionfoMScTest/2_Targets/translated_Baits_20.fasta \
+    -t_dna /Documents/Combretaceae_Analysis/2_Targets/translated_Baits_20.fasta \
     supercontig \
     --sample_names ./samples.txt \
     --fasta_dir 2_Supercontigs
@@ -171,7 +171,7 @@ cd ../2_Aligned
 ````
 ###### Proceed to trimming
 ```bash
-for f in *.fas; do (java -jar /Users/olivierm/Desktop/BionfoMScTest/1_scripts/phyutility.jar -clean 0.8 -in $f -out ${f/.fas}_Tr.fas); done
+for f in *.fas; do (java -jar /Documents/Combretaceae_Analysis/1_scripts/phyutility.jar -clean 0.8 -in $f -out ${f/.fas}_Tr.fas); done
 ````
 HEREHEREHEREHEREHEREHEREHEREHERE
 
@@ -183,7 +183,7 @@ HEREHEREHEREHEREHEREHEREHEREHERE
 for f in *fas; do (echo ${f/}>> samples.txt); done
 ````
 ```bash
-python3  /Users/olivierm/Desktop/BionfoMScTest/1_scripts/CleaningNew.py
+python3  /Documents/Combretaceae_Analysis/1_scripts/CleaningNew.py
 ````
 ###### Step 4.4 iqtree - Generate gene trees (a tree per loci)
 ```bash
