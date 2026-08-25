@@ -173,11 +173,6 @@ cd ../2_Aligned
 ```bash
 for f in *.fas; do (java -jar /Documents/Combretaceae_Analysis/1_scripts/phyutility.jar -clean 0.8 -in $f -out ${f/.fas}_Tr.fas); done
 ````
-HEREHEREHEREHEREHEREHEREHEREHERE
-
-
-
-
 ##### Step 4.3 Cleaning of trimmed aligments - Remove sequences in each loci which might ony be containing N or gaps (-)
 ```bash
 for f in *fas; do (echo ${f/}>> samples.txt); done
@@ -213,10 +208,13 @@ cat 6_IQTree_V1/*.treefile > 7_Astral_V1/iqtrees.trees
 cd 7_Astral_V1
 ````
 ```bash
+conda activate newick_utils
+````
+```bash
 nw_ed iqtrees.trees 'i & b<=10' o > iqtree-BS10.trees
 ````
 ```bash
-java -jar  /home/omaurin/apps/Astral/astral.5.7.8.jar -i iqtree-BS10.trees -o iqtree-BS10_sp_V1.tre --outgroup ERR4180096_1M_L001 -t 2 2> iqtree-astral_BS10.log
+java -jar  /Documents/Combretaceae_Analysis/1_scripts/Astral/astral.5.7.8.jar -i iqtree-BS10.trees -o iqtree-BS10_sp_V1.tre --outgroup ERR4180096_1M_L001 -t 2 2> iqtree-astral_BS10.log
 ````
 
 #Renaming tips
