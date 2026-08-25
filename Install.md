@@ -73,3 +73,10 @@ conda create -n raxml -c bioconda -c conda-forge raxml -y
 ```bash
 conda deactivate
 ````
+# Install MrBayes
+```bash
+conda create -n mrbayes -c bioconda -c conda-forge mrbayes -y
+```
+```bash
+conda deactivate
+````
