@@ -95,6 +95,7 @@ mkdir ../3_Hybpiper
 ```bash
 mv *L001 ../3_Hybpiper
 ````
+👉 Access the Hybpiper folders (*_L001)[CLICK HERE](https://drive.google.com/drive/folders/1OshLmjdvYS-8hOgjHJry0EzrK0iMcXfd?usp=drive_link)
 #### STEP3 Generating Stats, Heatmap and DNA matrices
 ##### Navigate to the folder with Trimmed sequences files
 ````bash
