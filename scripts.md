@@ -57,7 +57,7 @@ mkdir ../2_Trimmed
 ```bash
 mv *fastq ../2_Trimmed
 ````
-👉 Access the Trimmed files (.fastq)[CLICK HERE](https://drive.google.com/drive/folders/1LBb-kk8ilU3VOzkFHQdkyEHC_y-snBGf?usp=drive_link)
+👉 Access the Trimmed files (.fastq) [CLICK HERE](https://drive.google.com/drive/folders/1LBb-kk8ilU3VOzkFHQdkyEHC_y-snBGf?usp=drive_link)
 
  #### STEP_2 Running Hybpiper - Mapping Reads on target file
  ##### Navigate to the folder with Trimmed sequences files
