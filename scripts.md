@@ -95,7 +95,7 @@ mkdir ../3_Hybpiper
 ```bash
 mv *L001 ../3_Hybpiper
 ````
-👉 Access the Hybpiper folders (*_L001)[CLICK HERE](https://drive.google.com/drive/folders/1OshLmjdvYS-8hOgjHJry0EzrK0iMcXfd?usp=drive_link)
+👉 Access the Hybpiper folders (*_L001) [CLICK HERE](https://drive.google.com/drive/folders/1OshLmjdvYS-8hOgjHJry0EzrK0iMcXfd?usp=drive_link)
 #### STEP3 Generating Stats, Heatmap and DNA matrices
 ##### Navigate to the folder with Hybpiper output
 ````bash
@@ -129,7 +129,10 @@ hybpiper retrieve_sequences \
     --sample_names ./samples.txt \
     --fasta_dir 2_Supercontigs
 ````
-
+👉 Access to the Stats and Sequences files
+    2_Supercontigs_lenght [CLICK HERE]()
+    2_Supercontigs__Heatmap [CLICK HERE]()
+    2_Supercontigs.zip [CLICK HERE]()
 #### STEP 4 - Analysing the Sequence Data
 ```bash
 mkdir ../4_Analysis
