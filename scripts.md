@@ -103,7 +103,7 @@ cd 3_Hybpiper
 ````
 ##### Create sample.txt
 ````bash
-ls *L001 > samples.txt
+for f in *L001; do (echo $f >> samples.txt); done
 ````
 ##### Step 3.1 - Generating the stats
 ```bash
