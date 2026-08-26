@@ -216,4 +216,4 @@ nw_ed iqtrees.trees 'i & b<=10' o > iqtree-BS10.trees
 java -jar  /Documents/Combretaceae_Analysis/1_scripts/Astral/astral.5.7.8.jar -i iqtree-BS10.trees -o iqtree-BS10_sp_V1.tre --outgroup ERR4180096_1M_L001 -t 2 2> iqtree-astral_BS10.log
 ````
 👉 Access the astral coalescent tree [CLICK HERE](https://drive.google.com/file/d/1FcEZ0CCv454RWdBcapu5uKMGdJeX6seE/view?usp=drive_link)
-#Renaming tips
+##### Step 5 R and accociated packages - Generate a final figure
