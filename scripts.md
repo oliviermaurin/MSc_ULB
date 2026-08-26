@@ -13,13 +13,13 @@ cd Combretaceae_Analysis
 ### Copy scripts (1_scripts) and targets (2_targets) folders from Googledrive
 #### Download and place both folders within Combretaceae_Analysis (do not download individuals files within each folders)
 
-👉 Access the scripts folder [CLICK HERE](https://drive.google.com/drive/folders/1p7vpt3rqMgiPSDeD3HzoNsznFVYFeOqE?usp=drive_link)
+👉 Access the scripts folder (1_scripts) [CLICK HERE](https://drive.google.com/drive/folders/1p7vpt3rqMgiPSDeD3HzoNsznFVYFeOqE?usp=drive_link)
 
-👉 Access the targets folder [CLICK HERE](https://drive.google.com/drive/folders/1U8CsmAMU43nowDYPNBHyxp0V2a17O5J5?usp=drive_link)
+👉 Access the targets folder (2_targets) [CLICK HERE](https://drive.google.com/drive/folders/1U8CsmAMU43nowDYPNBHyxp0V2a17O5J5?usp=drive_link)
 
 ### Download the Raw Data and place within Combretaceae_Analysis (do not download individuals files within each folders)
 
-👉 Access the Raw data (.fastq.tar.gz)[CLICK HERE](https://drive.google.com/drive/folders/1-ReNA3Tf6iQaNfSFUbJ9tRuR9hftLIqE?usp=drive_link)
+👉 Access the Raw data (.fastq.tar.gz) [CLICK HERE](https://drive.google.com/drive/folders/1-ReNA3Tf6iQaNfSFUbJ9tRuR9hftLIqE?usp=drive_link)
 
 ### Preparing and analysing the Raw Data
 
