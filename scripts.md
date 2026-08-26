@@ -122,7 +122,6 @@ hybpiper retrieve_sequences \
     --sample_names ./samples.txt \
     --fasta_dir 2_Supercontigs
 ````
-
 👉 Access the Stats and HeatMap [CLICK HERE](https://drive.google.com/drive/folders/1aeuN5lg7rJzm-Go6gO5S_p1PW6W5eP_T?usp=drive_link)
 👉 Access the Sequences [CLICK HERE](https://drive.google.com/drive/folders/10ZqxiA8HGD8VeFgMnSamSpCzoE7S6FVV?usp=drive_link)
 #### STEP 4 - Analysing the Sequence Data
@@ -153,6 +152,7 @@ while IFS= read -r name || [ -n "$name" ]; do
         "${name}.fasta" > "${name}_Supercontigs_Al.fas"
 done < ./genenames.txt
 ````
+👉 Access the aligned sequences [CLICK HERE](https://drive.google.com/drive/folders/1YG0WXiR9GV4AFyQl9ZTAlcqfHcxFC6Y-?usp=drive_link)
 ##### Create diretory for aligned loci and move aligned loci into it
 ```bash
 mkdir ../2_Aligned
@@ -169,6 +169,7 @@ cd ../2_Aligned
 ```bash
 for f in *.fas; do (java -jar /Documents/Combretaceae_Analysis/1_scripts/phyutility.jar -clean 0.8 -in $f -out ${f/.fas}_Tr.fas); done
 ````
+👉 Access the trimmed sequences [CLICK HERE](https://drive.google.com/drive/folders/1TTl4dCcJpuu2rYkoYypUWetquAgaglvX?usp=drive_link)
 ##### Step 4.3 Cleaning of trimmed aligments - Remove sequences in each loci which might ony be containing N or gaps (-)
 ```bash
 for f in *fas; do (echo ${f/}>> samples.txt); done
@@ -176,6 +177,7 @@ for f in *fas; do (echo ${f/}>> samples.txt); done
 ```bash
 python3  /Documents/Combretaceae_Analysis/1_scripts/CleaningNew.py
 ````
+👉 Access the cleaned sequences [CLICK HERE](https://drive.google.com/drive/folders/16lPTg1nTe0TxTyRYtJf4bWAn-hNuYTt4?usp=drive_link)
 ###### Step 4.4 iqtree - Generate gene trees (a tree per loci)
 ```bash
 conda activate iqtree
@@ -191,8 +193,9 @@ while IFS= read -r name || [ -n "$name" ]; do
 done < ./genenames.txt
 ````
 ```bash
-mkdir 
+mkdir
 ````
+👉 Access the gene trees [CLICK HERE](https://drive.google.com/drive/folders/1dcpeW5vyTvfGRIIEcCP-uLzTuIBMIOVK?usp=drive_link)
 ##### Step 4.5 Astral - Generate a species tree (or coalescent tree)
 ```bash
 mkdir -p 7_Astral_V1
@@ -212,5 +215,5 @@ nw_ed iqtrees.trees 'i & b<=10' o > iqtree-BS10.trees
 ```bash
 java -jar  /Documents/Combretaceae_Analysis/1_scripts/Astral/astral.5.7.8.jar -i iqtree-BS10.trees -o iqtree-BS10_sp_V1.tre --outgroup ERR4180096_1M_L001 -t 2 2> iqtree-astral_BS10.log
 ````
-
+👉 Access the astral coalescent tree [CLICK HERE](https://drive.google.com/file/d/1FcEZ0CCv454RWdBcapu5uKMGdJeX6seE/view?usp=drive_link)
 #Renaming tips
