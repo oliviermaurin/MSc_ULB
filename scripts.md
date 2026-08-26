@@ -122,9 +122,10 @@ hybpiper retrieve_sequences \
     --sample_names ./samples.txt \
     --fasta_dir 2_Supercontigs
 ````
-👉 Access to the Stats and Sequences files
-    👉 Stats and HeatMap [CLICK HERE](https://drive.google.com/drive/folders/1aeuN5lg7rJzm-Go6gO5S_p1PW6W5eP_T?usp=drive_link)
-    👉 Sequemces [CLICK HERE](https://drive.google.com/drive/folders/10ZqxiA8HGD8VeFgMnSamSpCzoE7S6FVV?usp=drive_link)
+
+Access to the Stats and Sequences files
+👉 Stats and HeatMap [CLICK HERE](https://drive.google.com/drive/folders/1aeuN5lg7rJzm-Go6gO5S_p1PW6W5eP_T?usp=drive_link)
+👉 Sequemces [CLICK HERE](https://drive.google.com/drive/folders/10ZqxiA8HGD8VeFgMnSamSpCzoE7S6FVV?usp=drive_link)
 #### STEP 4 - Analysing the Sequence Data
 ```bash
 mkdir ../4_Analysis
