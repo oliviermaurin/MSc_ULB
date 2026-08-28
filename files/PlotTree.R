@@ -47,6 +47,6 @@ p <- p + geom_nodelab(aes(label=sprintf("%.2f",as.numeric(pp1))), hjust=1.8, vju
 
 #Draw the pies
 pies <- nodepie(Q, cols=1:3, color=c(Q1='blue', Q2='orange', Q3='grey'))
-inset(p, pies, width=0.05, height=0.05,hjust=-0.05,vjust=0.1) # Here the size of the pies can be adjusted with width and height # one opage size 0.6 two pages size 0.05
+inset(p, pies, width=0.2, height=0.2,hjust=-0.05,vjust=0.1) # Here the size of the pies can be adjusted with width and height # one opage size 0.6 two pages size 0.05
 dev.off()
 system2("open", filename)
