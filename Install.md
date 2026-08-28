@@ -64,16 +64,11 @@ conda install -c conda-forge biopython
 ```bash
 conda create -n raxml -c bioconda -c conda-forge raxml -y
 ```
-```bash
-conda deactivate
-````
 ### Install MrBayes
 ```bash
 conda create -n mrbayes -c bioconda -c conda-forge mrbayes -y
 ```
-```bash
-conda deactivate
-````
+
 ### Install modeltest-nj
 ```bash
 CONDA_SUBDIR=osx-64 conda create -n modeltest-ng -c bioconda -c conda-forge modeltest-ng -y
