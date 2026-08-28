@@ -217,3 +217,5 @@ java -jar  /Documents/Combretaceae_Analysis/1_scripts/Astral/astral.5.7.8.jar -i
 ````
 👉 Access the astral coalescent tree [CLICK HERE](https://drive.google.com/file/d/1FcEZ0CCv454RWdBcapu5uKMGdJeX6seE/view?usp=drive_link)
 ##### Step 5 R and accociated packages - Generate a final figure
+In Rstudio and use the Rscript accessiblke below
+👉 PloTree.R [CLICK HERE]()
