@@ -84,6 +84,7 @@ conda deactivate
 install.packages(c("ape", "ggplot2", "ggimage"), dependencies = TRUE)
 ```
 # Bioconductor packages
-```if (!requireNamespace("BiocManager", quietly = TRUE))
+```bash
+if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 ```
