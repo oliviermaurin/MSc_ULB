@@ -80,7 +80,7 @@ CONDA_SUBDIR=osx-64 conda create -n modeltest-ng -c bioconda -c conda-forge mode
 conda activate modeltest-ng
 conda config --env --set subdir osx-64
 ````
-### Install packages on RStudio (to do in RStudio not ion the terminal)
+### Install packages on RStudio (to do in RStudio not on the terminal)
 ```bash
 install.packages("ape", "ggplot2", "ggtree", "ggimage","treeio")
 ```
