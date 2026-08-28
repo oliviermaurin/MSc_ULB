@@ -80,6 +80,12 @@ conda deactivate
 ```
 ### in RStudio (not on the terminal), install the following packages
 # CRAN packages
+
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install(c("ggtree", "treeio"), update = FALSE, ask = FALSE)
+```
 ```bash
 install.packages(c("ape", "ggplot2", "ggimage"), dependencies = TRUE)
 ```
