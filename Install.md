@@ -79,6 +79,11 @@ conda config --env --set subdir osx-64
 conda deactivate
 ```
 ### in RStudio (not on the terminal), install the following packages
+# CRAN packages
 ```bash
-install.packages("ape", "ggplot2", "ggtree", "ggimage","treeio")
+install.packages(c("ape", "ggplot2", "ggimage"), dependencies = TRUE)
+```
+# Bioconductor packages
+```if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
 ```
