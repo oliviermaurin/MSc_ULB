@@ -6,7 +6,7 @@ library(ggimage)
 library(treeio)
 
 # Set path to directory
-setwd("~/Documents/Combretaceae_Analysis/7_Astral_V1")
+setwd("~/Documents/Combretaceae_Analysis/7_Astral_V1/")
 
 #Load file with tips translation
 trans_mat<- read.csv("translationtips.csv",stringsAsFactors=FALSE,header=TRUE)
@@ -39,14 +39,14 @@ filename <- "Combretaceae_MSc.pdf"
 pdf(filename,3,4)
 
 p <- ggtree(my_tree@phylo, ladderize = FALSE, branch.length = "none", size = 0.2) %<+% my_tree@data  # + 
-p <- p + xlim_tree(40) # standar is 50 distance bewteen right and left
+p <- p + xlim_tree(20) # standar is 50 distance bewteen right and left
 p <- p + geom_tiplab(size=1.4,offset=0.25,fontface = "italic") #, hjust= -0.05 
-p <- p + geom_nodelab(aes(label=sprintf("%.2f",as.numeric(pp1))), hjust=1.8, vjust=-0.6, size=1.2) ## one opage size 0.9
+p <- p + geom_nodelab(aes(label=sprintf("%.2f",as.numeric(pp1))), hjust=1.8, vjust=-0.6, size=1.4) ## one opage size 0.9
 
 #p <- p + ggtitle("Combretaceae_MSc.pdf")
 
 #Draw the pies
 pies <- nodepie(Q, cols=1:3, color=c(Q1='blue', Q2='orange', Q3='grey'))
-inset(p, pies, width=0.2, height=0.2,hjust=-0.05,vjust=0.1) # Here the size of the pies can be adjusted with width and height # one opage size 0.6 two pages size 0.05
+inset(p, pies, width=0.15, height=0.15,hjust=-0.05,vjust=0.1) # Here the size of the pies can be adjusted with width and height # one opage size 0.6 two pages size 0.05
 dev.off()
 system2("open", filename)
