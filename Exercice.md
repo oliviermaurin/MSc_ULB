@@ -207,13 +207,16 @@ mkdir 5_IQTree
 ```bash
 mv !(*fas) ../5_IQTree/
 ````
+```bash
+cd ../5_IQTree/
+````
 👉 Access the gene trees [CLICK HERE](https://drive.google.com/drive/folders/1dcpeW5vyTvfGRIIEcCP-uLzTuIBMIOVK?usp=drive_link)
 ##### Step 4.5 Astral - Generate a species tree (or coalescent tree)
 ```bash
-cat 5_IQTree/*.treefile > 6_Astral/iqtrees.trees
+mkdir ../6_Astral
 ````
 ```bash
-mkdir -p 6_Astral
+cat 5_IQTree/*.treefile > 6_Astral/iqtrees.trees
 ````
 ```bash
 cd 6_Astral
