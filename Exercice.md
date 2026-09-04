@@ -23,7 +23,7 @@ cd Combretaceae_Analysis
 
 ### Preparing and analysing the Raw Data
 
-#### STEP_1 Running Trimmomatic - Cleaning reads of adapteurs
+#### STEP_1 Running Trimmomatic - this runs Trimmomatic, the quality/adapter-trimming step that processes raw sequencing reads before anything else in your pipeline
 
 ##### Navigate to 1_Raw
 ```bash
@@ -37,7 +37,7 @@ conda activate trimmomatic
 ```bash
 for f in *R1.fastq.gz; do (echo ${f/_R1.fastq.gz}>> samples.txt); done
 ````
-##### Run Trimmomatic in a loop.
+##### Run Trimmomatic in a loop
 ```bash
 while read -r name; do
     echo "Processing $name..."
@@ -72,7 +72,7 @@ conda activate hybpiper
 ````bash
 for f in *_R1_Tpaired.fastq; do (echo ${f/_R1_Tpaired.fastq} >> samples.txt); done
 ````
-##### Run Hybpiper in a loop
+##### Run Hybpiper in a loop - this runs HybPiper's assemble command, the core assembly step that reconstructs each target gene from raw reads for every sample.
 ````bash
 while read -r name; do
     echo "Running HybPiper assemble for $name..."
@@ -105,7 +105,7 @@ cd 3_Hybpiper
 ````bash
 for f in *L001; do (echo $f >> samples.txt); done
 ````
-##### Step 3.1 - Generating the stats and HeatMap
+##### Step 3.1 - Generating the stats and HeatMap: this runs HybPiper's stats command, which generates summary statistics about how well target-capture assembly worked for each sample — essentially a QC/reporting step.
 ```bash
 hybpiper stats \
     -t_dna /Documents/Combretaceae_Analysis/2_Targets/translated_Baits_20.fasta \
@@ -114,7 +114,7 @@ hybpiper stats \
     --stats_filename 2_Supercontigs_stats \
     --seq_lengths_filename 2_Supercontigs_lenght
 ````
-##### Step 3.2 - Retrieve sequences for all samples per loci
+##### Step 3.2 - Retrieve sequences for all samples per loci: this runs HybPiper's retrieve_sequences command, which pulls out assembled gene sequences (in this case, "supercontigs") from all your samples' HybPiper output, organising them into per-gene FASTA files (almost!)ready for alignment
 ```bash
 hybpiper retrieve_sequences \
     -t_dna /Documents/Combretaceae_Analysis/2_Targets/translated_Baits_20.fasta \
@@ -144,7 +144,7 @@ conda activate mafft
 ```bash
 for f in *.fasta; do (echo ${f/.fasta} >> genenames.txt); done
 ````
-##### Proceed to alignment for all loci in a loop
+##### This is a bash loop that runs MAFFT (a multiple sequence aligner) on each gene listed in genenames.txt, producing the initial alignments that feed into the rest of your pipeline.
 ```bash
 while IFS= read -r name || [ -n "$name" ]; do
     [ -z "$name" ] && continue
@@ -165,7 +165,7 @@ mv *Al.fas ../2_Aligned
 ```bash
 cd ../2_Aligned
 ````
-###### Proceed to trimming
+###### Proceed to trimming: this is bash loop, this time running Phyutility (a Java tool for phylogenetic utilities) to trim alignment columns with too much missing data, applied to every .fas file in the current directory.
 ```bash
 for f in *.fas; do (java -jar /Documents/Combretaceae_Analysis/1_scripts/phyutility.jar -clean 0.8 -in $f -out ${f/.fas}_Tr.fas); done
 ````
@@ -193,6 +193,7 @@ conda activate iqtree
 ```bash
 for f in *fas; do (echo ${f/_Supercontigs_Al_Tr_Cl.fas}>> genenames.txt); done
 ````
+###### This is a bash loop that automates running IQ-TREE separately on many gene alignment files, one per line of a gene-name list.
 ```bash
 while IFS= read -r name || [ -n "$name" ]; do
     [ -z "$name" ] && continue
