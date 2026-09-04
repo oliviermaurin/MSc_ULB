@@ -132,7 +132,7 @@ mkdir ../4_Analysis
 cp -r 2_Supercontigs ../4_Analysis/1_Supercontigs
 ````
 ##### Step 4.1 Mafft - Align matrices
-###### Navigate to 3_Hybpiper
+###### Navigate to the folder with loci to align
 ```bash
 cd ../4_Analysis/1_Supercontigs
 ````
@@ -178,6 +178,14 @@ for f in *fas; do (echo ${f/}>> samples.txt); done
 python3  /Documents/Combretaceae_Analysis/1_scripts/CleaningNew.py
 ````
 👉 Access the cleaned sequences [CLICK HERE](https://drive.google.com/drive/folders/16lPTg1nTe0TxTyRYtJf4bWAn-hNuYTt4?usp=drive_link)
+
+##### Create diretory for the cleaded loci and move aligned loci into it
+```bash
+mkdir ../3_Cleaned
+````
+```bash
+mv *Cl.fas ../3_Cleaned
+````
 ###### Step 4.4 iqtree - Generate gene trees (a tree per loci)
 ```bash
 conda activate iqtree
@@ -192,19 +200,23 @@ while IFS= read -r name || [ -n "$name" ]; do
     iqtree -s "$gene" -pre "${gene%.fas}" -bb 1000 -nt 2 -m MFP
 done < ./genenames.txt
 ````
+##### Create diretory for iqtree output and move all files but *fas into it
 ```bash
-mkdir
+mkdir 5_IQTree
+````
+```bash
+mv !(*fas) ../5_IQTree/
 ````
 👉 Access the gene trees [CLICK HERE](https://drive.google.com/drive/folders/1dcpeW5vyTvfGRIIEcCP-uLzTuIBMIOVK?usp=drive_link)
 ##### Step 4.5 Astral - Generate a species tree (or coalescent tree)
 ```bash
-mkdir -p 7_Astral_V1
+cat 5_IQTree/*.treefile > 6_Astral/iqtrees.trees
 ````
 ```bash
-cat 6_IQTree_V1/*.treefile > 7_Astral_V1/iqtrees.trees
+mkdir -p 6_Astral
 ````
 ```bash
-cd 7_Astral_V1
+cd 6_Astral
 ````
 ```bash
 conda activate newick_utils
@@ -220,6 +232,6 @@ java -jar  /Documents/Combretaceae_Analysis/1_scripts/Astral/astral.5.7.8.jar -i
 ###### In Rstudio open the below accessible Rscript
 👉 PlotTree.R [CLICK HERE](https://github.com/oliviermaurin/MSc_ULB/blob/main/files/PlotTree.R)
 
-###### Place the translationtips.csv file into 7_Astral_V1 at ~/Mydocuments/Combretaceae_Analysis/7_Astral_V1
+###### Place the translationtips.csv file into 6_Astral at ~/Mydocuments/Combretaceae_Analysis/6_Astral
 👉 translationtips.csv [CLICK HERE](https://github.com/oliviermaurin/MSc_ULB/blob/main/files/translationtips.csv)
 
