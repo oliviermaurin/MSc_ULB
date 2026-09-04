@@ -215,6 +215,7 @@ cd ../5_IQTree/
 ```bash
 mkdir ../6_Astral
 ````
+###### This command gathers all the individual gene trees produced by IQ-TREE (one tree per .treefile) and merges them into a single multi-tree file, one Newick tree per line, saved as iqtrees.trees in the 6_Astral folder.
 ```bash
 cat 5_IQTree/*.treefile > 6_Astral/iqtrees.trees
 ````
@@ -224,9 +225,11 @@ cd 6_Astral
 ```bash
 conda activate newick_utils
 ````
+###### This command takes a set of trees (likely bootstrap or gene trees from IQ-TREE), and collapses/removes any internal branches with bootstrap support ≤ 10%, writing the resulting simplified trees to iqtree-BS10.trees. This is a common step in phylogenetics: low-support branches are considered unreliable, so they get collapsed into polytomies rather than treated as resolved bifurcations — often done before building a consensus tree or summarizing support
 ```bash
 nw_ed iqtrees.trees 'i & b<=10' o > iqtree-BS10.trees
 ````
+##### This command takes your collapsed (BS≤10 pruned) gene trees, runs them through ASTRAL to estimate a coalescent-based species tree, roots it on a specified outgroup sample, annotates internal branches with detailed support statistics (-t 2), and saves the tree plus a separate log of the run.
 ```bash
 java -jar  /Documents/Combretaceae_Analysis/1_scripts/Astral/astral.5.7.8.jar -i iqtree-BS10.trees -o iqtree-BS10_sp_V1.tre --outgroup ERR4180096_1M_L001 -t 2 2> iqtree-astral_BS10.log
 ````
