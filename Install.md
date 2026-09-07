@@ -78,14 +78,12 @@ conda config --env --set subdir osx-64
 ```bash
 conda deactivate
 ```
-### in RStudio (not on the terminal), install the following packages
+### Installing R and needed package for bulding tree
 ```bash
-if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
+mamba create -n r-env -c conda-forge -c bioconda r-base r-ape r-ggplot2 r-ggimage r-broom bioconductor-ggtree bioconductor-treeio
 ```
+#### Check the installation
 ```bash
-BiocManager::install(c("ggtree", "treeio"), update = FALSE, ask = FALSE)
-```
-```bash
-install.packages(c("ape", "ggplot2", "ggimage"), dependencies = TRUE)
+conda activate r-env
+conda list | grep -i ggtree
 ```
