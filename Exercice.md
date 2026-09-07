@@ -242,5 +242,8 @@ conda activate r-env
 ````
 ###### Place the compressed folder (cotaining the Rscfript and the translationtips.csv) into 6_Astral and unzipped it.
 👉 PlotTree.R [CLICK HERE](files/PlotTree.zip)
-
+###### Run the R script
+```bash
+conda activate r-env
+```bash
 
