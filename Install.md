@@ -78,7 +78,7 @@ conda config --env --set subdir osx-64
 ```bash
 conda deactivate
 ```
-### Installing R and needed package for bulding tree
+### Installing R and required package for bulding tree
 ```bash
 conda install -c conda-forge r-base
 ````
