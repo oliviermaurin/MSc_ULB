@@ -240,9 +240,7 @@ java -jar  /Documents/Combretaceae_Analysis/1_scripts/Astral/astral.5.7.8.jar -i
 ```bash
 conda activate r-env
 ````
+###### Place the compressed folder (cotaining the Rscfript and the translationtips.csv) into 6_Astral and unzipped it.
+👉 PlotTree.R [CLICK HERE](https://github.com/oliviermaurin/MSc_ULB/blob/main/files/
 
-👉 PlotTree.R [CLICK HERE](https://github.com/oliviermaurin/MSc_ULB/blob/main/files/PlotTree.R)
-
-###### Place the translationtips.csv file into 6_Astral at ~/Mydocuments/Combretaceae_Analysis/6_Astral
-👉 translationtips.csv [CLICK HERE](https://github.com/oliviermaurin/MSc_ULB/blob/main/files/translationtips.csv)
 
