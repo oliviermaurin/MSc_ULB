@@ -235,8 +235,12 @@ nw_ed iqtrees.trees 'i & b<=10' o > iqtree-BS10.trees
 java -jar  /Documents/Combretaceae_Analysis/1_scripts/Astral/astral.5.7.8.jar -i iqtree-BS10.trees -o iqtree-BS10_sp_V1.tre --outgroup ERR4180096_1M_L001 -t 2 2> iqtree-astral_BS10.log
 ````
 👉 Access the astral coalescent tree [CLICK HERE](https://drive.google.com/file/d/1FcEZ0CCv454RWdBcapu5uKMGdJeX6seE/view?usp=drive_link)
-##### Step 5 R and accociated packages - Generate a final figure
-###### In Rstudio open the below accessible Rscript
+##### Step 5 Using R and relavant packages - Generate a final figure
+###### Activate the r-env
+```bash
+conda activate r-env
+````
+
 👉 PlotTree.R [CLICK HERE](https://github.com/oliviermaurin/MSc_ULB/blob/main/files/PlotTree.R)
 
 ###### Place the translationtips.csv file into 6_Astral at ~/Mydocuments/Combretaceae_Analysis/6_Astral
