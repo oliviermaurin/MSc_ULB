@@ -80,7 +80,7 @@ conda deactivate
 ```
 ### Installing R and needed package for bulding tree
 ```bash
-mamba create -n r-env -c conda-forge -c bioconda r-base r-ape r-ggplot2 r-ggimage r-broom bioconductor-ggtree bioconductor-treeio
+conda create -n r-env -c conda-forge -c bioconda r-base r-ape r-ggplot2 r-ggimage r-broom bioconductor-ggtree bioconductor-treeio
 ```
 #### Check the installation
 ```bash
