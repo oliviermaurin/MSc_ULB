@@ -191,10 +191,13 @@ python3  /Documents/Combretaceae_Analysis/1_scripts/CleaningNew.py
 
 ##### Create diretory for the cleaded loci and move aligned loci into it
 ```bash
-mkdir ../3_Cleaned
+mkdir ../4_Cleaned
 ````
 ```bash
-mv *Cl.fas ../3_Cleaned
+mv *Cl.fas ../4_Cleaned
+````
+```bash
+cd ../4_Cleaned
 ````
 ###### Step 4.4 iqtree - Generate gene trees (a tree per loci)
 ```bash
