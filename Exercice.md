@@ -170,6 +170,16 @@ cd ../2_Aligned
 for f in *.fas; do (java -jar /Documents/Combretaceae_Analysis/1_scripts/phyutility.jar -clean 0.8 -in $f -out ${f/.fas}_Tr.fas); done
 ````
 👉 Access the trimmed sequences [CLICK HERE](https://drive.google.com/drive/folders/1TTl4dCcJpuu2rYkoYypUWetquAgaglvX?usp=drive_link)
+##### Create diretory for trimmed loci, move these into it and navigate to 3_Trimmed
+```bash
+mkdir ../3_Trimmed
+````
+```bash
+mv *Tr.fas ../3_Trimmed
+````
+```bash
+cd ../3_Trimmed
+````
 ##### Step 4.3 Cleaning of trimmed aligments - Remove sequences in each loci which might ony be containing N or gaps (-)
 ```bash
 for f in *fas; do (echo ${f/}>> samples.txt); done
