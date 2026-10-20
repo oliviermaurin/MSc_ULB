@@ -258,5 +258,7 @@ conda activate r-env
 ###### Run the R script
 ```bash
 conda activate r-env
+```
 ```bash
-
+Rscript treeplot.R
+```
