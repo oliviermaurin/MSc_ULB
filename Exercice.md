@@ -234,7 +234,7 @@ mkdir ../6_Astral
 cat 5_IQTree/*.treefile > 6_Astral/iqtrees.trees
 ````
 ```bash
-cd 6_Astral
+cd ../6_Astral
 ````
 ```bash
 conda activate newick_utils
